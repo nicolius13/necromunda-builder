@@ -1,13 +1,42 @@
 <template>
   <div>
-    <h1 class="title">
-      necromunda-builder
-    </h1>
+    <b-container class="main">
+      <b-row>
+        <b-col>
+          <h1 class="text-primary text-center">
+            A character planner for Necromunda Underhive Wars
+          </h1>
+          <h2 class="text-light text-center">
+            Select a profile and plan your character
+          </h2>
+          <h3 class="text-primary text-center">Gangs of the Underhive</h3>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          <b-img fluid src="~/assets/img/goliath.jpg"></b-img>
+          <ClassesLinks :house="'goliath'" />
+        </b-col>
+        <b-col>
+          <b-img fluid src="~/assets/img/esher.jpg"></b-img>
+          <ClassesLinks :house="'esher'" />
+        </b-col>
+        <b-col>
+          <b-img fluid src="~/assets/img/orlock.jpg"></b-img>
+          <ClassesLinks :house="'orlock'" />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-export default {};
+import ClassesLinks from '../components/UI/ClassesLinks';
+export default {
+  components: {
+    ClassesLinks,
+  },
+};
 </script>
 
-<style></style>
+<style lang="scss"></style>

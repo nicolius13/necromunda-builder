@@ -20,11 +20,16 @@ $clr-orlock: #528ac7;
 
 // BOOTSTRAP THEMING
 
-$dark: $clr-dark;
-$light: $clr-light;
-$primary: $clr-accent;
-$info: $clr-accent2;
-$succes: $clr-accent3;
+$theme-colors: (
+  'dark': $clr-dark,
+  'light': $clr-light,
+  'primary': $clr-accent,
+  'info': $clr-accent2,
+  'succes': $clr-accent3,
+  'goliath': $clr-goliath,
+  'esher': $clr-esher,
+  'orlock': $clr-orlock,
+);
 
 $headings-font-family: toxigenesis, sans-serif;
 
@@ -32,6 +37,7 @@ $headings-font-family: toxigenesis, sans-serif;
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../../node_modules/bootstrap-vue/src/index.scss';
 
+// GENERAL STYLING
 *,
 *::before,
 *::after {
@@ -44,6 +50,13 @@ body {
   font-family: barlow, sans-serif;
 }
 
-.navbar {
-  height: 80px;
+//  houses colors
+.goliath {
+  color: $clr-goliath;
+}
+.esher {
+  color: $clr-esher;
+}
+.orlock {
+  color: $clr-orlock;
 }
