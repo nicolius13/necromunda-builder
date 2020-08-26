@@ -6,7 +6,7 @@
           <h1 class="text-primary text-center">
             A character planner for Necromunda Underhive Wars
           </h1>
-          <h2 class="text-light text-center">
+          <h2 class="text-center">
             Select a profile and plan your character
           </h2>
           <h3 class="text-primary text-center">Gangs of the Underhive</h3>
@@ -31,7 +31,8 @@
 </template>
 
 <script>
-import ClassesLinks from '../components/UI/ClassesLinks';
+import ClassesLinks from '../components/navigation/ClassesLinks';
+
 export default {
   components: {
     ClassesLinks,

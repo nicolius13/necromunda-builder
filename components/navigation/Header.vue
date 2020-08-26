@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable type="dark">
-    <b-navbar-brand href="#">
+    <b-navbar-brand to="/">
       <b-img class="logo" src="~/assets/img/logo.jpg"></b-img>
     </b-navbar-brand>
 
@@ -19,9 +19,9 @@
           <nav class="mb-3">
             <ClassesLinks
               v-for="house in houses"
-              :key="house"
+              :key="house.name"
               :hide="hide"
-              :house="house"
+              :house="house.name"
             />
           </nav>
         </b-container>
@@ -31,7 +31,9 @@
 </template>
 
 <script>
-import ClassesLinks from './UI/ClassesLinks';
+import houses from '../../assets/gameInfo/houses.json';
+
+import ClassesLinks from './ClassesLinks';
 
 export default {
   components: {
@@ -39,7 +41,7 @@ export default {
   },
   data() {
     return {
-      houses: ['goliath', 'esher', 'orlock'],
+      houses,
     };
   },
 };
