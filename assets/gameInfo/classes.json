@@ -1,0 +1,31 @@
+[
+  {
+    "name": "deadeye"
+  },
+  {
+    "name": "brawler",
+    "perks": [
+      {
+        "name": "Armguard",
+        "description": "Special armour worn on both arms"
+      },
+      {
+        "name": "Vigilant",
+        "description": "Reduces cost of the melee ambush skill"
+      }
+    ],
+    "skill": {
+      "name": "Death from above",
+      "description": "Jump down on enemy below, creating a massive Area of effect shockwave that damages and stuns all targets"
+    }
+  },
+  {
+    "name": "heavy"
+  },
+  {
+    "name": "saboteur"
+  },
+  {
+    "name": "lay-mechanic"
+  }
+]

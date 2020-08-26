@@ -1,0 +1,15 @@
+{
+  "exhilaration": {
+    "name": "Exhilaration",
+    "type": "survival",
+    "description": "Activate after using Chem synth or any Support consumable Defensive self : +20% melee evasion Last until: start of next turn Non stackable",
+    "upgrade": "melee evasion",
+    "upgrade_1": "10",
+    "upgrade_2": "20",
+    "upgrade_3": "30",
+    "requirement": "willpower",
+    "requirement_1": "4",
+    "requirement_2": "8",
+    "requirement_3": "12"
+  }
+}

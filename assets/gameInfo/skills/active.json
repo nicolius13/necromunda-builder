@@ -1,0 +1,18 @@
+{
+  "charge": {
+    "name": "Charge",
+    "type": "offensive melee",
+    "AP_1H": 15,
+    "AP_2H": 30,
+    "range": "melee",
+    "desciption": "lorem ipsum sdfdhfhqd sgdhdhgfd sgsf s sddsf ",
+    "upgrade": "AP Cost",
+    "upgrade_1": "67%",
+    "upgrade_2": "50%",
+    "upgrade_3": "35%",
+    "requirement": "melee prowess",
+    "requirement_1": "4",
+    "requirement_2": "8",
+    "requirement_3": "12"
+  }
+}

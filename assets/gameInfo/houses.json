@@ -1,0 +1,29 @@
+[
+  {
+    "name": "goliath",
+    "perk": {
+      "name": "Hardened Brute",
+      "description": "- 5 AP cost of equipped weapon for each enemy Engaged with user: Defensive Self Removed when enemy use Disengage Removed when enemy fail Out of action Stackable x3"
+    },
+    "stats": [
+      {
+        "name": "toughness",
+        "change": "6"
+      },
+      {
+        "name": "Strength",
+        "change": "4"
+      },
+      {
+        "name": "Willpower",
+        "change": "2"
+      }
+    ]
+  },
+  {
+    "name": "esher"
+  },
+  {
+    "name": "orlock"
+  }
+]
