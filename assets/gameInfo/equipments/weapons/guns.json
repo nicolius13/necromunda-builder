@@ -1,0 +1,12 @@
+{
+  "lasgun": {
+    "name": "Lasgun",
+    "dmg": 54,
+    "type": "energy",
+    "AP": 30,
+    "ini": -20,
+    "rng": 40,
+    "clip": 4,
+    "unRel": "12%-14%0"
+  }
+}

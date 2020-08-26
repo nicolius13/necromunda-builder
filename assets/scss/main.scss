@@ -1,3 +1,43 @@
+// FONTS
+@font-face {
+  font-family: toxigenesis;
+  src: url('~assets/fonts/ToxigenesisRg-Bold.otf');
+}
+@font-face {
+  font-family: barlow;
+  src: url('~assets/fonts/Barlow-Regular.ttf');
+}
+
+// CUSTOM VARIABLES
+$clr-light: #b3d3d6;
+$clr-dark: #1a1a1a;
+$clr-accent: #fec611;
+$clr-accent2: #3a765d;
+$clr-accent3: #0a3e09;
+$clr-goliath: #e03e28;
+$clr-esher: #e49702;
+$clr-orlock: #528ac7;
+
+// BOOTSTRAP THEMING
+
+$theme-colors: (
+  'dark': $clr-dark,
+  'light': $clr-light,
+  'primary': $clr-accent,
+  'info': $clr-accent2,
+  'succes': $clr-accent3,
+  'goliath': $clr-goliath,
+  'esher': $clr-esher,
+  'orlock': $clr-orlock,
+);
+
+$headings-font-family: toxigenesis, sans-serif;
+
+// IMPORT BOOTSTRAP
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap-vue/src/index.scss';
+
+// GENERAL STYLING
 *,
 *::before,
 *::after {
@@ -6,5 +46,115 @@
 }
 
 body {
-  background-image: url('../img/back.jpg');
+  background-image: url('~assets/img/back.jpg');
+  font-family: barlow, sans-serif;
+  color: $clr-light;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.separator {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 62, 9, 0) 0%,
+    $clr-accent2 50%,
+    rgba(10, 62, 9, 0) 100%
+  );
+  height: 1px;
+  width: 100%;
+}
+
+.separator-left {
+  background: linear-gradient(90deg, $clr-accent2 0%, rgba(10, 62, 9, 0) 100%);
+  height: 1px;
+  width: 100%;
+}
+
+.greenBack {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 62, 9, 0.5) 0%,
+    rgba(10, 62, 9, 0.3) 50%,
+    rgba(10, 62, 9, 0.1) 100%
+  );
+}
+
+.skillCard {
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.invCard {
+  background: #000;
+}
+
+//  houses colors
+.goliath {
+  color: $clr-goliath;
+}
+.esher {
+  color: $clr-esher;
+}
+.orlock {
+  color: $clr-orlock;
+}
+
+.bord-goliath {
+  transition: all 0.15s ease-in-out;
+  border: solid 1px;
+  border-color: $clr-goliath;
+}
+.bord-esher {
+  transition: all 0.15s ease-in-out;
+  border: solid 1px;
+  border-color: $clr-esher;
+}
+.bord-orlock {
+  transition: all 0.15s ease-in-out;
+  border: solid 1px;
+  border-color: $clr-orlock;
+}
+
+.back-goliath {
+  background: $clr-goliath;
+  transition: all 0.15s ease-in-out;
+}
+.back-esher {
+  background: $clr-esher;
+  transition: all 0.15s ease-in-out;
+}
+.back-orlock {
+  background: $clr-orlock;
+  transition: all 0.15s ease-in-out;
+}
+
+// LINKS ICON
+.classesBtn {
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover .bord-goliath {
+    border-color: darken($clr-goliath, 15%);
+  }
+  &:hover .bord-esher {
+    border-color: darken($clr-esher, 15%);
+  }
+  &:hover .bord-orlock {
+    border-color: darken($clr-orlock, 15%);
+  }
+
+  &:hover .back-goliath {
+    background: darken($clr-goliath, 15%);
+  }
+  &:hover .back-esher {
+    background: darken($clr-esher, 15%);
+  }
+  &:hover .back-orlock {
+    background: darken($clr-orlock, 15%);
+  }
 }
