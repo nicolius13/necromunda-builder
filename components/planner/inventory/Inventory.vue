@@ -1,8 +1,9 @@
 <template>
   <b-card class="border border-succes" bg-variant="dark">
     <h4 class="text-center">Equipments</h4>
-    <div class="seperator mt-2 mb-2"></div>
-    <h5>Weapon</h5>
+    <div class="separator mt-2 mb-2"></div>
+    <h2 class="text-center">WIP</h2>
+    <!-- <h5>Weapon</h5>
     <div class="separator-left"></div>
     <b-col v-for="(implant, i) in 1" :key="i">
       <Weapon />
@@ -26,20 +27,20 @@
     <div class="separator-left"></div>
     <b-col v-for="(implant, i) in 2" :key="i">
       <Armor />
-    </b-col>
+    </b-col> -->
   </b-card>
 </template>
 
 <script>
-import Implant from './Implant';
-import Armor from './Armor';
-import Weapon from './Weapon';
+// import Implant from './Implant';
+// import Armor from './Armor';
+// import Weapon from './Weapon';
 
 export default {
   components: {
-    Implant,
-    Armor,
-    Weapon,
+    // Implant,
+    // Armor,
+    // Weapon,
   },
 };
 </script>
