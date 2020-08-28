@@ -15,15 +15,15 @@
       <b-row>
         <b-col>
           <b-img fluid src="~/assets/img/goliath.jpg"></b-img>
-          <ClassesLinks :house="'goliath'" />
+          <ClassesLinks :house="'goliath'" :landing="true" />
         </b-col>
         <b-col>
           <b-img fluid src="~/assets/img/esher.jpg"></b-img>
-          <ClassesLinks :house="'esher'" />
+          <ClassesLinks :house="'esher'" :landing="true" />
         </b-col>
         <b-col>
           <b-img fluid src="~/assets/img/orlock.jpg"></b-img>
-          <ClassesLinks :house="'orlock'" />
+          <ClassesLinks :house="'orlock'" :landing="true" />
         </b-col>
       </b-row>
     </b-container>

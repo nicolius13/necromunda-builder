@@ -1,7 +1,7 @@
 <template>
   <div
     :class="`bord-${house}`"
-    class="svgContain d-flex align-items-center justify-content-center mr-2"
+    class="svgContain d-flex align-items-center justify-content-center"
   >
     <span
       :style="{

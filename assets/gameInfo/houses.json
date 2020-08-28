@@ -8,22 +8,50 @@
     "stats": [
       {
         "name": "toughness",
-        "change": "6"
+        "change": 6
       },
       {
-        "name": "Strength",
-        "change": "4"
+        "name": "strength",
+        "change": 4
       },
       {
-        "name": "Willpower",
-        "change": "2"
+        "name": "willpower",
+        "change": 2
       }
     ]
   },
   {
-    "name": "esher"
+    "name": "esher",
+    "stats": [
+      {
+        "name": "agility",
+        "change": 6
+      },
+      {
+        "name": "melee prowess",
+        "change": 4
+      },
+      {
+        "name": "intelligence",
+        "change": 2
+      }
+    ]
   },
   {
-    "name": "orlock"
+    "name": "orlock",
+    "stats": [
+      {
+        "name": "ranged aptitude",
+        "change": 6
+      },
+      {
+        "name": "agility",
+        "change": 4
+      },
+      {
+        "name": "alertness",
+        "change": 2
+      }
+    ]
   }
 ]

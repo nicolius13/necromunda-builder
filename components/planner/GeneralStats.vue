@@ -1,7 +1,7 @@
 <template>
   <b-card class="border border-succes" bg-variant="dark">
     <h4 class="text-center">General Stats</h4>
-    <div class="seperator mt-2 mb-2"></div>
+    <div class="separator mt-2 mb-2"></div>
     <b-row
       v-for="(stat, i) in genStat"
       :key="stat.name"

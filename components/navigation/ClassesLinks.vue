@@ -1,6 +1,6 @@
 <template>
   <b-nav vertical>
-    <h3 :class="house" class="text-capitalize">{{ house }}</h3>
+    <h3 v-if="!landing" :class="house" class="text-capitalize">{{ house }}</h3>
     <b-button
       v-for="charact in classes"
       :key="charact.name"
@@ -14,6 +14,7 @@
         :house="house"
         :character="charact.name"
         :dimension="dimension"
+        class="mr-2"
       />
       {{ charact.name }}
     </b-button>
@@ -37,6 +38,10 @@ export default {
     house: {
       type: String,
       default: '',
+    },
+    landing: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
