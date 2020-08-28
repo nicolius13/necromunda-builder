@@ -150,7 +150,6 @@ export default {
     this.$root.$on('changedTrait', $event => {
       // substract old trait stat bonus if it exist
       if ($event.old) {
-        console.log($event.old);
         this.substractBaseStats($event.old);
       }
       // add stat bonus
