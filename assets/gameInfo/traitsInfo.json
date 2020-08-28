@@ -2,139 +2,139 @@
   "physical": [
     {
       "name": "agile",
-      "stat": [
-        {
+      "stat": {
+        "agi": {
           "name": "agility",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "athletic",
-      "stat": [
-        {
+      "stat": {
+        "srt": {
           "name": "strength",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "resilient",
-      "stat": [
-        {
+      "stat": {
+        "tou": {
           "name": "toughness",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "healthy",
-      "stat": [
-        {
+      "stat": {
+        "agi": {
           "name": "agility",
           "change": 1
         },
-        {
+        "str": {
           "name": "strength",
           "change": 1
         },
-        {
+        "tou": {
           "name": "toughness",
           "change": 1
         }
-      ]
+      }
     }
   ],
   "mental": [
     {
       "name": "stoic",
-      "stat": [
-        {
+      "stat": {
+        "wil": {
           "name": "willpower",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "clever",
-      "stat": [
-        {
+      "stat": {
+        "int": {
           "name": "intelligence",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "observant",
-      "stat": [
-        {
+      "stat": {
+        "ale": {
           "name": "alertness",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "curious",
-      "stat": [
-        {
+      "stat": {
+        "wil": {
           "name": "willpower",
           "change": 1
         },
-        {
+        "int": {
           "name": "intelligence",
           "change": 1
         },
-        {
+        "ale": {
           "name": "alertness",
           "change": 1
         }
-      ]
+      }
     }
   ],
   "martial": [
     {
       "name": "disciplined",
-      "stat": [
-        {
+      "stat": {
+        "mel": {
           "name": "melee prowess",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "focused",
-      "stat": [
-        {
+      "stat": {
+        "ran": {
           "name": "ranged aptitude",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "calculated",
-      "stat": [
-        {
+      "stat": {
+        "acc": {
           "name": "accuracy",
           "change": 3
         }
-      ]
+      }
     },
     {
       "name": "protean",
-      "stat": [
-        {
+      "stat": {
+        "acc": {
           "name": "accuracy",
           "change": 1
         },
-        {
+        "mel": {
           "name": "melee prowess",
           "change": 1
         },
-        {
+        "ran": {
           "name": "ranged aptitude",
           "change": 1
         }
-      ]
+      }
     }
   ]
 }

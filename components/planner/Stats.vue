@@ -11,7 +11,7 @@
     <div class="separator mt-2 mb-2"></div>
 
     <b-row
-      v-for="(attribut, i) in attributs"
+      v-for="(attribut, key, i) in attributs"
       :key="attribut.name"
       class="justify-content-around mb-2"
     >
@@ -21,12 +21,12 @@
       <b-col class="d-flex align-items-center justify-content-around" cols="5">
         <b-icon-caret-left-fill
           class="caret"
-          @click="substractStat(attribut.name)"
+          @click="substractStat(key)"
         ></b-icon-caret-left-fill>
         <p>{{ attribut.value }} / {{ attribut.max }}</p>
         <b-icon-caret-right-fill
           class="caret"
-          @click="addStat(attribut.name)"
+          @click="addStat(key)"
         ></b-icon-caret-right-fill>
       </b-col>
       <div v-if="i === 2 || i === 5" class="separator-left mt-2 mb-2"></div>
@@ -64,62 +64,62 @@ export default {
     return {
       houseStats: null,
       pointLeft: 15,
-      attributs: [
-        {
+      attributs: {
+        agi: {
           name: 'agility',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        str: {
           name: 'strength',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        tou: {
           name: 'toughness',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        wil: {
           name: 'willpower',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        int: {
           name: 'intelligence',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        ale: {
           name: 'alertness',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        mel: {
           name: 'melee prowess',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        ran: {
           name: 'ranged aptitude',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-        {
+        acc: {
           name: 'accuracy',
           baseVal: 1,
           value: 1,
           max: 10,
         },
-      ],
+      },
     };
   },
 
@@ -127,18 +127,55 @@ export default {
     isLeader() {
       if (this.isLeader) {
         // add max stat to all stats as leader
-        this.attributs.forEach(stat => {
+        Object.values(this.attributs).forEach(stat => {
           stat.max += leader.maxStat;
         });
         // add the bonus stats as leader
         this.addBaseStats(leader.stats, true);
       } else {
         // substract the leader max stat boost to all stats
-        this.attributs.forEach(stat => {
+        Object.values(this.attributs).forEach(stat => {
           stat.max -= leader.maxStat;
         });
+        // substract the bonus stats as leader
         this.substractBaseStats(leader.stats, true);
       }
+    },
+    // Watch AGILITY
+    'attributs.agi.value'(newVal) {
+      this.$root.$emit('agiChange', newVal);
+    },
+    // Watch STRENGTH
+    'attributs.str.value'(newVal) {
+      this.$root.$emit('strChange', newVal);
+    },
+    // Watch TOUGHNESS
+    'attributs.tou.value'(newVal) {
+      this.$root.$emit('touChange', newVal);
+    },
+    // Watch WILLPOWER
+    'attributs.wil.value'(newVal) {
+      this.$root.$emit('wilChange', newVal);
+    },
+    // Watch INTELLIGENCE
+    'attributs.int.value'(newVal) {
+      this.$root.$emit('intChange', newVal);
+    },
+    // Watch ALERTNESS
+    'attributs.ale.value'(newVal) {
+      this.$root.$emit('aleChange', newVal);
+    },
+    // Watch MELEE PROWESS
+    'attributs.mel.value'(newVal) {
+      this.$root.$emit('melChange', newVal);
+    },
+    // Watch RANGED APTITUDE
+    'attributs.ran.value'(newVal) {
+      this.$root.$emit('ranChange', newVal);
+    },
+    // Watch ACCURACY
+    'attributs.acc.value'(newVal) {
+      this.$root.$emit('accChange', newVal);
     },
   },
 
@@ -159,54 +196,40 @@ export default {
 
   methods: {
     // Add stats from the array given to the base stats
-    addBaseStats(statArray, leader = false) {
-      this.attributs.forEach(stat => {
-        statArray.forEach(changingStat => {
-          if (stat.name === changingStat.name) {
-            if (!leader) {
-              stat.max += changingStat.change;
-            }
-            stat.baseVal += changingStat.change;
-            stat.value += changingStat.change;
-          }
-        });
+    addBaseStats(statObject, leader = false) {
+      Object.entries(statObject).forEach(([stat, change]) => {
+        if (!leader) {
+          this.attributs[stat].max += change.change;
+        }
+        this.attributs[stat].baseVal += change.change;
+        this.attributs[stat].value += change.change;
       });
     },
     // substract stats from the array given to the base stats
-    substractBaseStats(statArray, leader = false) {
-      this.attributs.forEach(stat => {
-        statArray.forEach(changingStat => {
-          if (stat.name === changingStat.name) {
-            if (!leader) {
-              stat.max -= changingStat.change;
-            }
-            stat.baseVal -= changingStat.change;
-            stat.value -= changingStat.change;
-          }
-        });
+    substractBaseStats(statObject, leader = false) {
+      Object.entries(statObject).forEach(([stat, change]) => {
+        if (!leader) {
+          this.attributs[stat].max -= change.change;
+        }
+        this.attributs[stat].baseVal -= change.change;
+        this.attributs[stat].value -= change.change;
       });
     },
     // add 1 point to a given stat if there is point left and stat not at max
     addStat(stat) {
-      this.attributs.find(el => {
-        if (el.name === stat) {
-          if (el.value < el.max && this.pointLeft > 0) {
-            this.pointLeft--;
-            el.value++;
-          }
-        }
-      });
+      const changedStat = this.attributs[stat];
+      if (changedStat.value < changedStat.max && this.pointLeft > 0) {
+        this.pointLeft--;
+        changedStat.value++;
+      }
     },
     // Substract 1 point to a given stat if stat not at min
     substractStat(stat) {
-      this.attributs.find(el => {
-        if (el.name === stat) {
-          if (el.value > el.baseVal) {
-            this.pointLeft++;
-            el.value--;
-          }
-        }
-      });
+      const changedStat = this.attributs[stat];
+      if (changedStat.value > changedStat.baseVal) {
+        this.pointLeft++;
+        changedStat.value--;
+      }
     },
   },
 };

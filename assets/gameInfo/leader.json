@@ -1,10 +1,9 @@
 {
   "name": "leader",
   "maxStat": 2,
-  "stats": [
-    {
-      "name": "willpower",
+  "stats": {
+    "wil": {
       "change": 2
     }
-  ]
+  }
 }

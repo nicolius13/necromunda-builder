@@ -5,53 +5,44 @@
       "name": "Hardened Brute",
       "description": "- 5 AP cost of equipped weapon for each enemy Engaged with user: Defensive Self Removed when enemy use Disengage Removed when enemy fail Out of action Stackable x3"
     },
-    "stats": [
-      {
-        "name": "toughness",
+    "stats": {
+      "tou": {
         "change": 6
       },
-      {
-        "name": "strength",
+      "str": {
         "change": 4
       },
-      {
-        "name": "willpower",
+      "wil": {
         "change": 2
       }
-    ]
+    }
   },
   {
     "name": "esher",
-    "stats": [
-      {
-        "name": "agility",
+    "stats": {
+      "agi": {
         "change": 6
       },
-      {
-        "name": "melee prowess",
+      "mel": {
         "change": 4
       },
-      {
-        "name": "intelligence",
+      "int": {
         "change": 2
       }
-    ]
+    }
   },
   {
     "name": "orlock",
-    "stats": [
-      {
-        "name": "ranged aptitude",
+    "stats": {
+      "ran": {
         "change": 6
       },
-      {
-        "name": "agility",
+      "agi": {
         "change": 4
       },
-      {
-        "name": "alertness",
+      "ale": {
         "change": 2
       }
-    ]
+    }
   }
 ]
