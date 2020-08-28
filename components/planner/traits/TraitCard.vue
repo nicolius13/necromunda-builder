@@ -11,7 +11,7 @@
     <!-- POPOVER -->
     <b-popover
       :target="`trait-${traitType}`"
-      triggers="click"
+      triggers="click blur"
       placement="top"
       boundary-padding="10"
       custom-class="traitPop"

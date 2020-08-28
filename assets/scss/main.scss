@@ -14,6 +14,7 @@ $clr-dark: #1a1a1a;
 $clr-accent: #fec611;
 $clr-accent2: #3a765d;
 $clr-accent3: #0a3e09;
+$clr-stat: #eff5cf;
 $clr-goliath: #e03e28;
 $clr-esher: #e49702;
 $clr-orlock: #528ac7;
@@ -26,6 +27,7 @@ $theme-colors: (
   'primary': $clr-accent,
   'info': $clr-accent2,
   'succes': $clr-accent3,
+  'stat': $clr-stat,
   'goliath': $clr-goliath,
   'esher': $clr-esher,
   'orlock': $clr-orlock,
@@ -157,4 +159,12 @@ p {
   &:hover .back-orlock {
     background: darken($clr-orlock, 15%);
   }
+}
+
+// POPOVER
+
+.bs-popover-top > .arrow::after,
+.bs-popover-bottom > .arrow::after {
+  border-top-color: $clr-accent2;
+  border-bottom-color: $clr-accent2;
 }
