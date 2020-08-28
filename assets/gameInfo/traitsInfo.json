@@ -1,0 +1,140 @@
+{
+  "physical": [
+    {
+      "name": "agile",
+      "stat": [
+        {
+          "name": "agility",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "athletic",
+      "stat": [
+        {
+          "name": "strength",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "resilient",
+      "stat": [
+        {
+          "name": "toughness",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "healthy",
+      "stat": [
+        {
+          "name": "agility",
+          "change": 1
+        },
+        {
+          "name": "strength",
+          "change": 1
+        },
+        {
+          "name": "toughness",
+          "change": 1
+        }
+      ]
+    }
+  ],
+  "mental": [
+    {
+      "name": "stoic",
+      "stat": [
+        {
+          "name": "willpower",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "clever",
+      "stat": [
+        {
+          "name": "intelligence",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "observant",
+      "stat": [
+        {
+          "name": "alertness",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "curious",
+      "stat": [
+        {
+          "name": "willpower",
+          "change": 1
+        },
+        {
+          "name": "intelligence",
+          "change": 1
+        },
+        {
+          "name": "alertness",
+          "change": 1
+        }
+      ]
+    }
+  ],
+  "martial": [
+    {
+      "name": "disciplined",
+      "stat": [
+        {
+          "name": "melee prowess",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "focused",
+      "stat": [
+        {
+          "name": "ranged aptitude",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "calculated",
+      "stat": [
+        {
+          "name": "accuracy",
+          "change": 3
+        }
+      ]
+    },
+    {
+      "name": "protean",
+      "stat": [
+        {
+          "name": "accuracy",
+          "change": 1
+        },
+        {
+          "name": "melee prowess",
+          "change": 1
+        },
+        {
+          "name": "ranged aptitude",
+          "change": 1
+        }
+      ]
+    }
+  ]
+}
