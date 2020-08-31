@@ -1,15 +1,28 @@
 {
-  "exhilaration": {
-    "name": "Exhilaration",
-    "type": "survival",
-    "description": "Activate after using Chem synth or any Support consumable Defensive self : +20% melee evasion Last until: start of next turn Non stackable",
-    "upgrade": "melee evasion",
-    "upgrade_1": "10",
-    "upgrade_2": "20",
-    "upgrade_3": "30",
-    "requirement": "willpower",
-    "requirement_1": "4",
-    "requirement_2": "8",
-    "requirement_3": "12"
-  }
+  "deadeye": {},
+  "brawler": {
+    "Daunting_presence": {
+      "name": "Daunting presence",
+      "type": "Crowd Control",
+      "description": [
+        "Activate for each enemy Engaged with this fighter",
+        "Affect all engaged targets",
+        "Mechanical target",
+        "+$UPGRADE AP cost of Disengage",
+        "Removed if target disengage",
+        "Removed if target is stunned or out of action",
+        "stackable"
+      ],
+      "upgrade_1": "10",
+      "upgrade_2": "20",
+      "upgrade_3": "30",
+      "requirement": "mel",
+      "requirement_1": "4",
+      "requirement_2": "8",
+      "requirement_3": "12"
+    }
+  },
+  "heavy": {},
+  "saboteur": {},
+  "lay-mechanic": {}
 }

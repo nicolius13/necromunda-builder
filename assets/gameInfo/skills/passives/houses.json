@@ -1,0 +1,25 @@
+{
+  "goliath": {
+    "retaliation": {
+      "name": "Retaliation",
+      "type": "Support - Skills",
+      "description": [
+        "Require wielding a Melee Weapon",
+        "Activate after suffering Melee Damage",
+        "Skill Self",
+        "-$UPGRADE% AP cost of any Melee Offensive Skill",
+        "Last until End of Battle",
+        "Not stackable"
+      ],
+      "upgrade_1": "10",
+      "upgrade_2": "20",
+      "upgrade_3": "30",
+      "requirement": "Strength",
+      "requirement_1": "4",
+      "requirement_2": "8",
+      "requirement_3": "12"
+    }
+  },
+  "esher": {},
+  "orlock": {}
+}
